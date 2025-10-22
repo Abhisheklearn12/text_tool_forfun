@@ -7,4 +7,6 @@ edition = "2024"
 libc = "0.2.177"
 
 [build-dependencies]
-cc = "1.2.41" # without this, extern c won't work.
+cc = "1.2.41" 
+# Note: extern "C" works without the `cc` crate.
+# `cc` is only needed if I want Cargo to compile and link C/C++ sources automatically.
